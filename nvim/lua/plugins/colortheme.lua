@@ -9,7 +9,7 @@ return {
 			keywordStyle = { italic = true },
 			statementStyle = { bold = true },
 			typeStyle = {},
-			transparent = true, -- Attiva la trasparenza per il tema
+			transparent = true,
 			dimInactive = false,
 			terminalColors = true,
 			colors = {
@@ -18,11 +18,9 @@ return {
 			},
 			overrides = function(colors)
 				return {
-					-- Imposta lo sfondo come trasparente per le colonne dei numeri e dei segni
 					LineNr = { bg = "NONE" },
 					CursorLineNr = { bg = "NONE" },
 					SignColumn = { bg = "NONE" },
-					-- Aggiungi altre colonne se necessario, ad esempio 'FoldColumn'
 				}
 			end,
 			theme = "wave",
