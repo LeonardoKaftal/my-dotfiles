@@ -83,7 +83,7 @@ return { -- Autocompletion
 				-- Select the [n]ext item
 				["<A-l>"] = cmp.mapping.select_next_item(),
 				-- Select the [p]revious item
-				["<A-p>"] = cmp.mapping.select_prev_item(),
+				["<A-k>"] = cmp.mapping.select_prev_item(),
 
 				-- Scroll the documentation window [b]ack / [f]orward
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),

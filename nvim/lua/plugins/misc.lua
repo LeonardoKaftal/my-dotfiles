@@ -3,6 +3,10 @@ return {
 	{
 		-- Tmux & split window navigation
 		"christoomey/vim-tmux-navigator",
+		vim.keymap.set("n", "C-h", ":TmuxVavigateLeft<CR>"),
+		vim.keymap.set("n", "C-l", ":TmuxVavigateRightCR>"),
+		vim.keymap.set("n", "C-k", ":TmuxVavigateUp<CR>"),
+		vim.keymap.set("n", "C-k", ":TmuxVavigateDown<CR>"),
 	},
 	{
 		-- Detect tabstop and shiftwidth automatically
@@ -17,8 +21,29 @@ return {
 		"tpope/vim-rhubarb",
 	},
 	{
-		-- Hints keybinds
 		"folke/which-key.nvim",
+		event = "VeryLazy",
+		opts = {
+			-- Configurazione opzionale per which-key
+		},
+		keys = {
+			-- Mostra i keymap locali del buffer con <leader>?
+			{
+				"<leader>?",
+				function()
+					require("which-key").show({ global = false })
+				end,
+				desc = "Buffer Local Keymaps (which-key)",
+			},
+			-- Mostra tutti i keymap globali con <leader>w
+			{
+				"<leader>w",
+				function()
+					require("which-key").show({ global = true })
+				end,
+				desc = "Show Global Keymaps (which-key)",
+			},
+		},
 	},
 	{
 		-- Autoclose parentheses, brackets, quotes, etc.

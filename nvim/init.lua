@@ -30,4 +30,5 @@ require("lazy").setup({
 	require("plugins.misc"),
 	require("plugins.none-ls"),
 	require("plugins.multicursor"),
+	require("plugins.vim-test"),
 })
